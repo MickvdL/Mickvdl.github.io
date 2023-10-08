@@ -3,12 +3,12 @@
     margin: 0;
 }
 
-
 /* navigation ********************************************/
 nav {
     background: linear-gradient(107.2deg, rgb(247, 0, 0) 10.6%, rgb(150, 15, 15) 91.1%);
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 nav img {
@@ -46,7 +46,8 @@ li a:hover {
 }
 
 /* content home ********************************************/
-.content, .content2 {
+.content,
+.content2 {
     display: flex;
     justify-content: center;
     margin: auto;
@@ -55,10 +56,10 @@ li a:hover {
 }
 
 .under18 {
-    background-image: url("onder18.png");
     width: 50vw;
     height: auto;
     transition-duration: 250ms;
+    position: relative;
 }
 
 .under18:hover {
@@ -66,56 +67,13 @@ li a:hover {
 }
 
 .under18 h1 {
+    position: absolute;
+    bottom: 2em;
     font-size: 2em;
     font-weight: 800;
     color: white;
     margin-top: 13em;
     margin-left: 1em;
-
-}
-
-/* cta-buttons ********************************************/
-.leesverder {
-    color: white;
-    margin-left: 1.5em;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-.leesverder:hover {
-    text-decoration: underline;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center; /* Hiermee centeren we de inhoud horizontaal */
-    align-items: center; /* Hiermee centeren we de inhoud verticaal */
-    height: 4em;
-    margin-bottom: 3em;
-}
-
-.buy {
-    background-color: #de2349;
-    width: 10em;
-    margin-top: 2em;
-    height: 3em;
-    display: flex;
-    border-radius: 2em;
-    font-size: 1em;
-    transition-duration: 250ms;
-}
-
-.buy:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-
-.buy a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin: auto;
 }
 
 /* matches ********************************************/
@@ -129,8 +87,8 @@ li a:hover {
 
 .matches {
     background-image: linear-gradient(#efefef 0%, #efefef 83%, #e6e6e6 93%, #ccc 100%);
-    height: auto;
-    width: 35vw;
+    height: 37.5em;
+    width: 30vw;
 }
 
 .time {
@@ -146,7 +104,6 @@ li a:hover {
     font-size: 0.6em;
     font-weight: 400;
 }
-
 
 .home-party img {
     height: auto;
@@ -170,58 +127,6 @@ li a:hover {
     color: #000000;
     font-weight: 400;
     font-size: 1em;
-}
-
-/* Content tickets ********************************************/
-main.ticket {
-    width: 80%;
-    margin-top: 1em;
-    margin: auto;
-}
-
-h1.nextmatch {
-    font-size: 2em;
-    margin: 1em 0;
-}
-
-.competition {
-    font-size: 1.5em;
-    color: #353535;
-    text-align: center;
-}
-
-h2.program {
-    font-size: 1.5em;
-    margin: 1em 0;
-}
-
-h2.time-tickets {
-    color: #c8232a;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.5em;
-}
-
-p.datetickets {
-    color: #757575;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1em;
-    text-align: center;
-    margin-top: 0.2em;
-}
-
-.containertickets {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div.discount img {
-    height: auto;
-    width: 100%;
-    margin: 3em 0;
 }
 
 /* Goal of the Month ********************************************/
@@ -253,7 +158,112 @@ div.discount img {
     height: auto;
 }
 
+/* cta-buttons ********************************************/
+.leesverder {
+    position: absolute;
+    color: white;
+    margin-left: 1.5em;
+    font-size: 1.2em;
+    text-decoration: none;
+    bottom: 2em;
+}
+
+.leesverder:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Hiermee centeren we de inhoud horizontaal */
+    align-items: center; /* Hiermee centeren we de inhoud verticaal */
+    height: 4em;
+    margin-bottom: 3em;
+}
+
+.buy {
+    background-color: #de2349;
+    width: 10em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    border-radius: 2em;
+    font-size: 1em;
+    transition-duration: 250ms;
+}
+
+.buy:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.buy a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: auto;
+}
+
+/* Content tickets ********************************************/
+/* Main ticket */
+.ticket {
+    width: 80%;
+    margin-top: 1em;
+    margin: auto;
+}
+
+/* H1 */
+.nextmatch {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+/* H2 */
+.competition {
+    font-size: 1.5em;
+    color: #353535;
+    text-align: center;
+}
+
+/* H2 */
+.program {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+/* H2 */
+.time-tickets {
+    color: #c8232a;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+/* Paragraph */
+.datetickets {
+    color: #757575;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: center;
+    margin-top: 0.2em;
+}
+
+.containertickets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount img {
+    height: auto;
+    width: 100%;
+    margin: 3em 0;
+}
+
 /* Content team ********************************************/
+
+/* Container team */
 .row-team {
     width: 80%;
     margin: auto;
@@ -269,25 +279,27 @@ div.discount img {
     font-weight: 800;
 }
 
-div.row-players {
+/* Div */
+.row-players {
     display: flex;
     justify-content: space-between;
     margin: 1.5em 0;
 }
 
-div.player {
+/* Div */
+.player {
     position: relative;
     transition-duration: 250ms;
 }
 
-div.player:hover {
+.player:hover {
     transform: scale(1.1);
 }
 
 .number {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0.5em;
+    right: 0.5em;
     text-align: right;
     font-size: 2em;
     font-weight: bold;
@@ -309,11 +321,17 @@ article {
     margin: auto;
 }
 
-.newsvideo,
 .newsimage {
     margin-top: 3em;
     width: 100%;
     height: auto;
+    transition-duration: 250ms;
+}
+
+.newsvideo {
+    margin-top: 3em;
+    width: 100%;
+    height: 50vh;
     transition-duration: 250ms;
 }
 
@@ -349,8 +367,10 @@ article iframe {
     height: 30em;
     margin-top: 1em;
 }
-/* Footer ********************************************/
-h2.official {
+
+/* Partners ********************************************/
+/* H2 */
+.official {
     margin-top: 3em;
     text-align: center;
     color: #000000;
@@ -359,7 +379,7 @@ h2.official {
 }
 
 .partners {
-    justify-content: space-between;
+    justify-content: space-evenly;
     display: flex;
     margin: 4em;
 }
@@ -372,6 +392,12 @@ h2.official {
 
 .sponsers:hover {
     transform: scale(1.1);
+}
+
+/* Footer ********************************************/
+footer {
+    background-color: #1d1d1d;
+    color: white;
 }
 
 .socials {
@@ -391,25 +417,34 @@ h2.official {
     align-items: center;
 
     /* Animation settings */
-    transition-duration: 250ms;
     animation-name: spin;
     animation-duration: 1200ms;
     animation-iteration-count: 5;
     animation-timing-function: linear;
 }
+
 /* Keyframes */
 @keyframes spin {
-    0% {transform:rotate(0deg);}
-    50% {transform:rotate(130deg);}
-    75% {transform:rotate(260deg);}
-    100% {transform:rotate(360deg);}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(130deg);
+    }
+
+    75% {
+        transform: rotate(260deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .social:hover {
     background-color: #c8232a;
-    transform: scale(1.1);
 }
-
 
 .socials img {
     height: 2em;
